@@ -80,7 +80,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">157</span>
+            <span class="post-count">236</span>
         </span>
     </span>
 
@@ -102,7 +102,7 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>利用windows power shell实现在物理机和虚拟linux系统下的免密登录。<br>使用以下的代码生成公私钥对。<br>    <code>ssh-keygen</code><br>这个代码会自动在计算机.ssh目录下中自动生成公私钥。<br>    id_rsa （私钥）<br>    id_rsa.pub  (公钥)<br>有了公钥只要将公钥上传到目的系统的.ssh目录下。<br>    <code>ssh-copy-id -i ~/.ssh/id_rsa.pub 目标用户名@目标ip</code><br>使用以下代码进行测试。<br>    <code>ssh 目标用户名@目标ip</code><br>没有输入密码就登录成功说明成功实现免密登录。<br>ps：在上传公钥时应该要输入密码。</p>
+  <p>利用windows power shell实现在物理机和虚拟linux系统下的免密登录。<br>使用以下的命令生成公私钥对。<br>    <code>ssh-keygen</code><br>这个命令会自动在计算机.ssh目录下中自动生成公私钥。<br>    id_rsa （私钥）<br>    id_rsa.pub  (公钥)<br>有了公钥只要将公钥上传到目的系统的.ssh目录下。<br>    <code>ssh-copy-id -i ~/.ssh/id_rsa.pub 目标用户名@目标ip</code><br>使用以下命令进行测试。<br>    <code>ssh 目标用户名@目标ip</code><br>没有输入密码就登录成功说明成功实现免密登录。<br>ps：在上传公钥时应该要输入密码。<br>linux系统IP地址查看可使用<br>    <code>ifconfig</code><br>目前已知的出现的问题：<br>1.在进行远程连接时未安装ssh服务<br>使用<code>apt install ssh</code>进行安装ssh服务<br>必要时在命令前面加上sudo提权。<br>2.ssh服务未开启,使用以下命令开启ssh服务<br>    <code>ssh service start</code></p>
  
       <!-- reward -->
       
@@ -179,6 +179,15 @@
 
    
   <nav class="article-nav">
+    
+      <a href="/2022/12/19/linux%E5%9F%BA%E7%A1%80/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            linux基础
+          
+        </div>
+      </a>
     
     
       <a href="/2021/12/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="article-nav-link">
